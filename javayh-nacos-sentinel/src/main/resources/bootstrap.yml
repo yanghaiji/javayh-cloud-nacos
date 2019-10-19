@@ -1,0 +1,26 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: javayh-nacos-sentinel
+  profiles:
+    active: sentinel
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8080
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        cluster-name: javayh-nacos
+      config:
+        group: javayh
+        server-addr: 127.0.0.1:8848
+        prefix: javayh-nacos-sentinel
+        file-extension: yml
+
+#logging:
+#  level:
+#    cn:
+#      chinotan:
+#        feign: DEBUG
