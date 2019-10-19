@@ -31,7 +31,7 @@ https://github.com/Dylan-haiji/javayh-cloud 这里进行学习了解
  
 - 生态图
 
-![full stack developer tutorial](../javayh-cloud-nacos/doc/img/nacos.png)
+![full stack developer tutorial](../../doc/img/nacos.png)
 - 依赖
 
       <dependency>
