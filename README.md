@@ -31,7 +31,7 @@ https://github.com/Dylan-haiji/javayh-cloud 这里进行学习了解
  
 - 生态图
 
-![full stack developer tutorial](../../doc/img/nacos.png)
+![full stack developer tutorial](doc/img/nacos.png)
 - 依赖
 
       <dependency>
@@ -65,7 +65,7 @@ https://github.com/Dylan-haiji/javayh-cloud 这里进行学习了解
                 prefix: javayh-nacos-provider
                 file-extension: yml     
 这时启动服务在控制就可以看到服务
-![full stack developer tutorial](../javayh-cloud-nacos/doc/img/nacos-01.png)
+![full stack developer tutorial](doc/img/nacos-01.png)
 
  - consumer配置
  同provider配置，这里通过feign，进行服务调用，如果不了解feign的使用，请结合
@@ -76,8 +76,8 @@ https://github.com/Dylan-haiji/javayh-cloud进行学习
  ## 五、NacosConfig
  - NacosConfig配置
  
- ![full stack developer tutorial](../javayh-cloud-nacos/doc/img/config.png)
- ![full stack developer tutorial](../javayh-cloud-nacos/doc/img/nacosconfig.png)
+ ![full stack developer tutorial](doc/img/config.png)
+ ![full stack developer tutorial](doc/img/nacosconfig.png)
  **说明：**
 >Data ID : prefix-active.file-extension
 >
@@ -118,13 +118,13 @@ https://github.com/Dylan-haiji/javayh-cloud进行学习
 
 http://localhost:8080                
 启动服务调用接口:  http://localhost:8092/getSentinel/ssss，效果如下
- ![full stack developer tutorial](../javayh-cloud-nacos/doc/img/sentinel.png)   
+ ![full stack developer tutorial](doc/img/sentinel.png)   
  
 -服务限流
 如图；对本案例的借口进行限流操作，最多连续出发三次，但第四次是会出现图而的提示           
- ![full stack developer tutorial](../javayh-cloud-nacos/doc/img/sentinel-01.png)                  
+ ![full stack developer tutorial](doc/img/sentinel-01.png)                  
  
- ![full stack developer tutorial](../javayh-cloud-nacos/doc/img/sentinel-02.png)     
+ ![full stack developer tutorial](doc/img/sentinel-02.png)     
  
  其他功能大家可以尝试
  本案例代码：https://github.com/Dylan-haiji/javayh-cloud-nacos
