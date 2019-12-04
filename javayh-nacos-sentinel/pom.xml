@@ -5,12 +5,12 @@
     <parent>
         <groupId>com.javayh</groupId>
         <artifactId>javayh-cloud-nacos</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.javayh</groupId>
     <artifactId>javayh-nacos-sentinel</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${project.version}</version>
     <name>javayh-nacos-sentinel</name>
     <description>Demo project for Spring Boot</description>
 
@@ -31,7 +31,7 @@
         <dependency>
             <groupId>com.javayh</groupId>
             <artifactId>javayh-nacos-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

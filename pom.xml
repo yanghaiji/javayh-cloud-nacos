@@ -9,13 +9,14 @@
     </parent>
     <groupId>com.javayh</groupId>
     <artifactId>javayh-cloud-nacos</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>javayh-cloud-nacos</name>
     <description>Demo project for Spring Boot</description>
     <packaging>pom</packaging>
 
     <properties>
         <java.version>1.8</java.version>
+        <project.version>1.0.0</project.version>
         <finchley.version>Finchley.SR1</finchley.version>
         <alibaba-nacos.version>0.2.2.RELEASE</alibaba-nacos.version>
         <alibaba-nacos-config.version>0.2.1.RELEASE</alibaba-nacos-config.version>

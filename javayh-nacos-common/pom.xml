@@ -5,12 +5,12 @@
     <parent>
         <groupId>com.javayh</groupId>
         <artifactId>javayh-cloud-nacos</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.javayh</groupId>
     <artifactId>javayh-nacos-common</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${project.version}</version>
     <name>javayh-nacos-common</name>
     <description>Demo project for Spring Boot</description>
     <packaging>jar</packaging>
@@ -21,14 +21,5 @@
     <dependencies>
 
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
