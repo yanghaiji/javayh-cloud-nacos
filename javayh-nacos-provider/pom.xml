@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.javayh</groupId>
     <artifactId>javayh-nacos-provider</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${project.version}</version>
     <name>javayh-nacos-provider</name>
     <description>Demo project for Spring Boot</description>
 
@@ -23,6 +23,15 @@
             <groupId>com.javayh</groupId>
             <artifactId>javayh-nacos-common</artifactId>
             <version>${project.version}</version>
+        </dependency>
+        <!--引入的zipkin依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
         </dependency>
     </dependencies>
 

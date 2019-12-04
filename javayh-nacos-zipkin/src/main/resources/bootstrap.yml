@@ -1,0 +1,31 @@
+server:
+  port: 8096
+spring:
+  application:
+    name: javayh-zipkin-server
+  profiles:
+    active: provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        cluster-name: javayh-nacos
+      config:
+        group: javayh
+        server-addr: 127.0.0.1:8848
+        prefix: javayh-nacos-provider
+        file-extension: yml
+  security:
+    user:
+      name: admin
+      password: admin
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+#logging:
+#  level:
+#    cn:
+#      chinotan:
+#        feign: DEBUG

@@ -27,6 +27,7 @@
         <module>javayh-nacos-consumer</module>
         <module>javayh-nacos-common</module>
         <module>javayh-nacos-sentinel</module>
+        <module>javayh-nacos-zipkin</module>
     </modules>
     <dependencies>
         <dependency>
