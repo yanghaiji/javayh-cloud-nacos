@@ -1,4 +1,4 @@
-package com.javayh.nacas.zipkin.server;
+package com.javayh.nacos.zipkin.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
