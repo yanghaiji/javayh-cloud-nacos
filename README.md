@@ -11,7 +11,8 @@ https://github.com/Dylan-haiji/javayh-cloud 这里进行学习了解
         --javayh-nacos-provide           服务生产者
         --javayh-nacos-consumer          服务消费者
         --javayh-nacos-sentinel          服务监控
-        --javayh-nacos-zipkin            zipkin-server
+        --javayh-nacos-zipkin            链式追踪服务
+        --javayh-nacos-zuul              路由转发服务
       
 ## 二、技术架构
 - SpringBoot
@@ -22,6 +23,7 @@ https://github.com/Dylan-haiji/javayh-cloud 这里进行学习了解
 - Sentinel
 - Feign
 - Zipkin
+- Zuul
 
 ## 三、Nacos介绍
 关于nacos的安装这里不过多解说，很简单，百度一下就可以
