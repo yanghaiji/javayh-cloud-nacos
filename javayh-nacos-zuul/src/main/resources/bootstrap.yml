@@ -1,10 +1,10 @@
 server:
-  port: 8091
+  port: 8097
 spring:
   application:
-    name: javayh-nacos-consumer
+    name: javayh-nacos-zuul
   profiles:
-    active: consumer
+    active: zuul
   cloud:
     nacos:
       discovery:
@@ -15,6 +15,10 @@ spring:
         server-addr: 127.0.0.1:8848
         prefix: javayh-nacos-provider
         file-extension: yml
+  security:
+    user:
+      name: admin
+      password: admin
   zipkin:
     base-url: http://localhost:8096
     # 关闭服务发现，否则Spring Cloud会把zipkin的url当做服务名称
@@ -24,14 +28,29 @@ spring:
   sleuth:
     sampler:
       probability: 1  # 设置抽样采集率为100%，默认为0.1，即10%
-feign:
-  hystrix:
-    enabled: true
-  compression:
-    request:
+#--------------------Zuul-----------------------
+zuul:
+  routes:
+    member:
+      path: /provider/**
+      serviceId: javayh-nacos-provider
+      sensitiveHeaders: "*"
+    auth:
+      path: /consumer/**
+      serviceId: javayh-nacos-consumer
+      sensitiveHeaders: "*"
+  retryable: false
+  ignored-services: "*"
+  ribbon:
+    eager-load:
       enabled: true
-    response:
-      enabled: true
+  host:
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
+  add-proxy-headers: true
+
+
+#----------------------超时配置-------------------
 ribbon:
   ReadTimeout: 60000
   ConnectTimeout: 60000
@@ -48,10 +67,3 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
-      circuitBreaker:
-      requestVolumeThreshold: 3
-
-logging:
-  level:
-    org.springframework.cloud.openfeign: debug
-    org.springframework.cloud.sleuth: debug

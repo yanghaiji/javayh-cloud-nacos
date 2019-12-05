@@ -20,6 +20,7 @@
         <finchley.version>Finchley.SR1</finchley.version>
         <alibaba-nacos.version>0.2.2.RELEASE</alibaba-nacos.version>
         <alibaba-nacos-config.version>0.2.1.RELEASE</alibaba-nacos-config.version>
+        <zipkin.version>2.9.4</zipkin.version>
     </properties>
 
     <modules>
@@ -28,6 +29,7 @@
         <module>javayh-nacos-common</module>
         <module>javayh-nacos-sentinel</module>
         <module>javayh-nacos-zipkin</module>
+        <module>javayh-nacos-zuul</module>
     </modules>
     <dependencies>
         <dependency>
@@ -64,6 +66,10 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 
