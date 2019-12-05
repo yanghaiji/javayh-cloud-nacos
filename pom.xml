@@ -21,6 +21,8 @@
         <alibaba-nacos.version>0.2.2.RELEASE</alibaba-nacos.version>
         <alibaba-nacos-config.version>0.2.1.RELEASE</alibaba-nacos-config.version>
         <zipkin.version>2.9.4</zipkin.version>
+        <zipkin.mysql.version>2.4.9</zipkin.mysql.version>
+        <druid.version>1.1.9</druid.version>
     </properties>
 
     <modules>

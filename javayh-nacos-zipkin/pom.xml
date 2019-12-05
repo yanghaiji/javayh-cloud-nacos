@@ -35,6 +35,33 @@
             <artifactId>zipkin-autoconfigure-ui</artifactId>
             <version>${zipkin.version}</version>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+      <!--  <dependency>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-storage-mysql</artifactId>
+            <version>${zipkin.mysql.version}</version>
+        </dependency>-->
+
+        <!--保存到数据库需要如下依赖-->
+        <!-- https://mvnrepository.com/artifact/io.zipkin.java/zipkin-autoconfigure-storage-mysql -->
+        <dependency>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-autoconfigure-storage-mysql</artifactId>
+            <version>${zipkin.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
