@@ -1,4 +1,4 @@
-package com.javayh.nacos.consumer;
+package com.javayh.nacos.tc;
 
 import com.codingapi.txlcn.tc.config.EnableDistributedTransaction;
 import org.springframework.boot.SpringApplication;

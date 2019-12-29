@@ -63,7 +63,7 @@ tx-lcn:
     admin-key: admin      # TM后台登陆密码，默认值为codingapi
     dtx-time: 150000      # 分布式事务执行总时间(ms). 默认为8000
     host: localhost
-    port: 9090
+    port: 8070
 #----------------------超时配置-------------------
 ribbon:
   ReadTimeout: 60000
