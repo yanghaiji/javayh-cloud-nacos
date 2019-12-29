@@ -25,6 +25,7 @@ import javax.sql.DataSource;
 /**
  * 在设置了spring.datasource.enable.dynamic 等于true是开启多数据源
  */
+
 @Configuration
 @AutoConfigureBefore(DruidDataSourceAutoConfigure.class)
 @ConditionalOnProperty(name = {"spring.datasource.dynamic.enable"}, matchIfMissing = false, havingValue = "true")

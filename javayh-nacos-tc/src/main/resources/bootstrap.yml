@@ -65,7 +65,7 @@ spring:
       config:
         group: javayh
         server-addr: 127.0.0.1:8848
-        prefix: javayh-nacos-provider
+        prefix: javayh-nacos-tc
         file-extension: yml
   zipkin:
     base-url: http://localhost:8096
@@ -115,8 +115,10 @@ tx-lcn:
       dtx:
         enabled: true
   client:
-    manager-address: localhost:9090
+    manager-address: localhost:8070
   logger:
     enabled: true
     driver-class-name: com.mysql.jdbc.Driver
     jdbc-url: jdbc:mysql://localhost:3306/tx_logger?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: root
