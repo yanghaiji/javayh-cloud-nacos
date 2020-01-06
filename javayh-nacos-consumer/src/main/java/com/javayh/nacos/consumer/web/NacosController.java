@@ -24,4 +24,8 @@ public class NacosController {
     public Result find(@PathVariable String name){
         return nacosConsumer.findNacos(name);
     }
+    @GetMapping("test")
+    public Result teset(){
+        return Result.javaYhQuerySuccess("Java有货");
+    }
 }
