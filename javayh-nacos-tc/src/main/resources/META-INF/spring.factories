@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.javayh.nacos.tc.db.conf.DataSourceAutoConfig

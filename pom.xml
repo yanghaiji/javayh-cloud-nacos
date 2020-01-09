@@ -37,7 +37,6 @@
         <module>javayh-nacos-zipkin</module>
         <module>javayh-nacos-zuul</module>
         <module>javayh-nacos-tm</module>
-        <module>javayh-nacos-tc</module>
         <module>javayh-nacos-mybatis</module>
     </modules>
     <repositories>
