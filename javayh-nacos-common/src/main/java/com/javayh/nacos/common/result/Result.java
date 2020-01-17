@@ -3,10 +3,10 @@ package com.javayh.nacos.common.result;
 import lombok.Data;
 
 @Data
-public class Result {
+public class Result<T> {
     private int code;
     private String message;
-    private Object data;
+    private T data;
     /*消息*/
     private static String query = "query.success";
     private static String insert = "insert.success";
@@ -22,7 +22,7 @@ public class Result {
         this.message = message;
     }
 
-    public Result(int code, String message, Object data) {
+    public Result(int code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
@@ -35,7 +35,7 @@ public class Result {
      * @param data
      * @return
      */
-    public static Result javaYhQuerySuccess(Object data) {
+    public static <T> Result javaYhQuerySuccess(T data) {
         return new Result(ResultCode.SUCCESS.getCode(), query, data);
     }
 
@@ -45,7 +45,7 @@ public class Result {
      * @param data
      * @return
      */
-    public static Result javaYhInsertSuccess(Object data) {
+    public static <T> Result insertSuccess(T data) {
         return new Result(ResultCode.SUCCESS.getCode(), insert, data);
     }
 
@@ -56,7 +56,7 @@ public class Result {
      * @param data
      * @return
      */
-    public static Result javaYhUpdateSuccess(Object data) {
+    public static <T> Result javaYhUpdateSuccess(T data) {
         return new Result(ResultCode.SUCCESS.getCode(), update, data);
     }
 
@@ -66,7 +66,7 @@ public class Result {
      * @param data
      * @return
      */
-    public static Result javaYhDeleteSuccess(Object data) {
+    public static <T> Result javaYhDeleteSuccess(T data) {
         return new Result(ResultCode.SUCCESS.getCode(), delete, data);
     }
 
@@ -76,7 +76,7 @@ public class Result {
      * @param data
      * @return
      */
-    public static Result javaYhResultFailed(Object data) {
+    public static <T> Result javaYhResultFailed(T data) {
         return new Result(ResultCode.FAILED.getCode(), failed, data);
     }
 }
