@@ -1,5 +1,6 @@
 package com.javayh.oauth.conf.security;
 
+import com.javayh.nacos.common.util.ASEUtil;
 import com.javayh.oauth.service.MyUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -43,6 +44,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailService).passwordEncoder(passwordEncoder());
+        /*auth.userDetailsService(userDetailService).passwordEncoder(new PasswordEncoder() {
+            //匹配  rawPassword 输入的密码 encodedPassword 数据库存储的密码
+            @Override
+            public boolean matches(CharSequence rawPassword, String encodedPassword) {
+                return encodedPassword.equals(encode(rawPassword));
+            }
+            @Override
+            public String encode(CharSequence rawPassword) {
+                return ASEUtil.encryData((String) rawPassword);
+            }
+        });*/
     }
 
     /**

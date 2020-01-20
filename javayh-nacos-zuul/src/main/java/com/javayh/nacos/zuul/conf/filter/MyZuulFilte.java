@@ -62,16 +62,16 @@ public class MyZuulFilte extends ZuulFilter {
         HttpServletRequest request = ctx.getRequest();
         log.info(String.format("%s >>> %s", request.getMethod(), request.getRequestURL().toString()));
         log.info("请求参数>>>"+request.getParameterMap());
-        Object accessToken = request.getParameter("access_token");
-        if(accessToken == null) {
-            log.warn("token is empty");
-            ctx.setSendZuulResponse(false);
-            ctx.setResponseStatusCode(401);
-            try {
-                ctx.getResponse().getWriter().write("token is empty");
-            }catch (Exception e){}
-            return null;
-        }
+//        Object accessToken = request.getParameter("access_token");
+//        if(accessToken == null) {
+//            log.warn("token is empty");
+//            ctx.setSendZuulResponse(false);
+//            ctx.setResponseStatusCode(401);
+//            try {
+//                ctx.getResponse().getWriter().write("token is empty");
+//            }catch (Exception e){}
+//            return null;
+//        }
         log.info("ok");
         return null;
     }

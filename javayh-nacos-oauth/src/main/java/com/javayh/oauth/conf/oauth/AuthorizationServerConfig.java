@@ -58,9 +58,9 @@ public class AuthorizationServerConfig  extends AuthorizationServerConfigurerAda
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 //         clients.withClientDetails(clientDetails());
         clients.inMemory()
-                .withClient("android")
+                .withClient("javayh")
                 .scopes("read")
-                .secret("android")
+                .secret("javayh")
                 .authorizedGrantTypes("password", "authorization_code", "refresh_token")
                 .and()
                 .withClient("webapp")

@@ -32,10 +32,10 @@ public class ProviderController {
 
     @GetMapping(value = "/find/nacos/{name}")
     public Result find(@PathVariable String name){
-        return Result.javaYhQuerySuccess(nacosProviderServer.findNacos(name));
+        return Result.querySuccess(nacosProviderServer.findNacos(name));
     }
     @GetMapping(value = "getConfig")
     public Result getConfig(){
-        return Result.javaYhQuerySuccess(user);
+        return Result.querySuccess(user);
     }
 }
