@@ -22,7 +22,7 @@ public class UserCtr {
     @Autowired
     private ConsumerTokenServices consumerTokenServices;
 
-    @GetMapping("/member")
+    @GetMapping("/user")
     public Principal user(Principal member) {
         return member;
     }

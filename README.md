@@ -13,6 +13,7 @@ https://github.com/Dylan-haiji/javayh-cloud 这里进行学习了解
         --javayh-nacos-sentinel          服务监控
         --javayh-nacos-zipkin            链式追踪服务
         --javayh-nacos-zuul              路由转发服务
+        --javayh-nacos-oauth             资源验证服务
       
 ## 二、技术架构
 - SpringBoot
@@ -24,8 +25,17 @@ https://github.com/Dylan-haiji/javayh-cloud 这里进行学习了解
 - Feign
 - Zipkin
 - Zuul
+- OAuth2
 
-## 三、Nacos介绍
+## 三、javayh-nacos-oauth  
+启动流程：
+- 需要启动nacos
+- 启动javayh-nacos-oauth
+- 启动javayh-nacos-zuul
+
+- [OAuth2 验证流程](javayh-nacos-oauth/README.md)
+
+## 四、Nacos介绍
 关于nacos的安装这里不过多解说，很简单，百度一下就可以
 - 简介
 
@@ -48,7 +58,7 @@ https://github.com/Dylan-haiji/javayh-cloud 这里进行学习了解
            <version>0.2.1.RELEASE</version>
        </dependency>
  
- ## 四、服务注册与调用     
+ ## 五、服务注册与调用     
  - provider配置
  
 这里需要注意:配置文件的名必须是bootstrap.xxx,否则会报空指针异常，由于文件的加载顺序导致
@@ -77,7 +87,7 @@ https://github.com/Dylan-haiji/javayh-cloud进行学习
 
 根结本案例的配置，调用接口：localhost:8091/consumer/find/{name},既可以看到效果
 
- ## 五、NacosConfig
+ ## 六、NacosConfig
  - NacosConfig配置
  
  ![full stack developer tutorial](doc/img/config.png)
