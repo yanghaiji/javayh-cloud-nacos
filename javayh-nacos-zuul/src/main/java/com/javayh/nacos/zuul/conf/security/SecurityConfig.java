@@ -1,4 +1,4 @@
-package com.javayh.nacos.zuul.conf;
+package com.javayh.nacos.zuul.conf.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;

@@ -35,6 +35,6 @@ class SentinelFallback implements SentinelServer{
      */
     @Override
     public Result findNacos(String name) {
-        return Result.javaYhResultFailed("Sentinel fallback param is --->"+name);
+        return Result.failed("Sentinel fallback param is --->"+name);
     }
 }

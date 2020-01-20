@@ -56,7 +56,7 @@ public class AuthorizationServerConfig  extends AuthorizationServerConfigurerAda
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        // clients.withClientDetails(clientDetails());
+//         clients.withClientDetails(clientDetails());
         clients.inMemory()
                 .withClient("android")
                 .scopes("read")
@@ -101,7 +101,7 @@ public class AuthorizationServerConfig  extends AuthorizationServerConfigurerAda
         DefaultTokenServices tokenServices = new DefaultTokenServices();
         tokenServices.setTokenStore(tokenStore());
         tokenServices.setSupportRefreshToken(true);
-        //tokenServices.setClientDetailsService(clientDetails());
+//        tokenServices.setClientDetailsService(clientDetails());
         // token有效期自定义设置，默认12小时
         tokenServices.setAccessTokenValiditySeconds(60*60*12);
         // refresh_token默认30天

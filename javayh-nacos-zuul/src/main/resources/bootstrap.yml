@@ -52,7 +52,10 @@ zuul:
     connect-timeout-millis: 60000
     socket-timeout-millis: 60000
   add-proxy-headers: true
-
+javayh-nacos-oauth:
+  ribbon:
+    ConnectTimeout: 500
+    ReadTimeout: 500
 #---------------------OAuth2---------------------
 security:
   oauth2:

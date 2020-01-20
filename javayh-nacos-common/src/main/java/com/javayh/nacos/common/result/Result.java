@@ -13,6 +13,7 @@ public class Result<T> {
     private static String update = "update.success";
     private static String delete = "delete.success";
     private static String failed = "failed";
+    private static String login = "login.success";
 
     public Result() {
     }
@@ -35,7 +36,7 @@ public class Result<T> {
      * @param data
      * @return
      */
-    public static <T> Result javaYhQuerySuccess(T data) {
+    public static <T> Result querySuccess(T data) {
         return new Result(ResultCode.SUCCESS.getCode(), query, data);
     }
 
@@ -56,7 +57,7 @@ public class Result<T> {
      * @param data
      * @return
      */
-    public static <T> Result javaYhUpdateSuccess(T data) {
+    public static <T> Result updateSuccess(T data) {
         return new Result(ResultCode.SUCCESS.getCode(), update, data);
     }
 
@@ -66,7 +67,7 @@ public class Result<T> {
      * @param data
      * @return
      */
-    public static <T> Result javaYhDeleteSuccess(T data) {
+    public static <T> Result deleteSuccess(T data) {
         return new Result(ResultCode.SUCCESS.getCode(), delete, data);
     }
 
@@ -76,7 +77,17 @@ public class Result<T> {
      * @param data
      * @return
      */
-    public static <T> Result javaYhResultFailed(T data) {
+    public static <T> Result failed(T data) {
         return new Result(ResultCode.FAILED.getCode(), failed, data);
+    }
+
+    /**
+     * 处理异常
+     *
+     * @param data
+     * @return
+     */
+    public static <T> Result login(T data) {
+        return new Result(ResultCode.SUCCESSTWO.getCode(), login, data);
     }
 }
