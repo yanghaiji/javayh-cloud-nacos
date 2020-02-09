@@ -6,12 +6,11 @@
         <groupId>com.javayh</groupId>
         <artifactId>javayh-cloud-nacos</artifactId>
         <version>1.0.0</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.javayh</groupId>
-    <artifactId>javayh-nacos-zuul</artifactId>
-    <version>${project.version}</version>
-    <name>javayh-nacos-zuul</name>
+    <artifactId>javayh-nacos-oauth</artifactId>
+    <version>1.0.0</version>
+    <name>javayh-nacos-oauth</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -20,23 +19,18 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.javayh</groupId>
-            <artifactId>javayh-nacos-common</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.mybatis.spring.boot</groupId>
-                    <artifactId>mybatis-spring-boot-starter</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.alibaba</groupId>
-                    <artifactId>druid-spring-boot-starter</artifactId>
-                </exclusion>
-            </exclusions>
-            <version>${project.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <!-- mysql驱动 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+            <groupId>com.javayh</groupId>
+            <artifactId>javayh-nacos-common</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <!--引入的zipkin依赖-->
         <dependency>
@@ -55,6 +49,19 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-security</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

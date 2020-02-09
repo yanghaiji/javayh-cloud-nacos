@@ -1,5 +1,6 @@
-package com.javayh.nacos.zuul.conf;
+package com.javayh.nacos.zuul.conf.filter;
 
+import com.javayh.nacos.common.result.Result;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
@@ -56,12 +57,12 @@ public class MyZuulFilte extends ZuulFilter {
      * @throws ZuulException
      */
     @Override
-    public Object run() throws ZuulException {
+    public Result run() throws ZuulException {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         log.info(String.format("%s >>> %s", request.getMethod(), request.getRequestURL().toString()));
         log.info("请求参数>>>"+request.getParameterMap());
-//        Object accessToken = request.getParameter("token");
+//        Object accessToken = request.getParameter("access_token");
 //        if(accessToken == null) {
 //            log.warn("token is empty");
 //            ctx.setSendZuulResponse(false);
@@ -71,7 +72,7 @@ public class MyZuulFilte extends ZuulFilter {
 //            }catch (Exception e){}
 //            return null;
 //        }
-//        log.info("ok");
+        log.info("ok");
         return null;
     }
 

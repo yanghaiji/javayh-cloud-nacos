@@ -25,7 +25,7 @@ public class SentinelController {
      */
     @GetMapping(value = "getSentinel/{str}")
     public Result getSentinel(@PathVariable String str){
-        return Result.javaYhQuerySuccess(sentinelServer.findNacos(str));
+        return Result.querySuccess(sentinelServer.findNacos(str));
     }
 
 }

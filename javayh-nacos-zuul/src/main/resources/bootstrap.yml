@@ -31,13 +31,17 @@ spring:
 #--------------------Zuul-----------------------
 zuul:
   routes:
-    member:
+    provider:
       path: /provider/**
       serviceId: javayh-nacos-provider
       sensitiveHeaders: "*"
-    auth:
+    consumer:
       path: /consumer/**
       serviceId: javayh-nacos-consumer
+      sensitiveHeaders: "*"
+    auth:
+      path: /auth/**
+      serviceId: javayh-nacos-oauth
       sensitiveHeaders: "*"
   retryable: false
   ignored-services: "*"
@@ -48,7 +52,20 @@ zuul:
     connect-timeout-millis: 60000
     socket-timeout-millis: 60000
   add-proxy-headers: true
-
+javayh-nacos-oauth:
+  ribbon:
+    ConnectTimeout: 500
+    ReadTimeout: 500
+#---------------------OAuth2---------------------
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:${server.port}/auth/oauth/token
+      user-authorization-uri: http://localhost:${server.port}/auth/oauth/authorize
+      client-id: web
+    resource:
+      user-info-uri:  http://localhost:${server.port}/auth/javayh/member
+      prefer-token-info: false
 
 #----------------------超时配置-------------------
 ribbon:

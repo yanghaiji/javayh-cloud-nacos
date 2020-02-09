@@ -38,6 +38,7 @@
         <module>javayh-nacos-zuul</module>
         <module>javayh-nacos-tm</module>
         <module>javayh-nacos-mybatis</module>
+        <module>javayh-nacos-oauth</module>
     </modules>
     <repositories>
         <repository>
