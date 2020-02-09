@@ -1,5 +1,13 @@
 # Springboot2.X 整合 CloudAlibaba 
 
+<p align="center">
+  <img src='https://img.shields.io/badge/license-Apache%202-4EB1BA.svg' alt='License'/>
+  <img src="https://img.shields.io/badge/Spring%20Boot-2.0.3.RELEASE-blue" alt="Downloads"/>
+  <img src="https://img.shields.io/badge/Spring%20Cloud-Finchley.SR1-blue" alt="Downloads"/>
+  <img src="https://img.shields.io/badge/Spring%20Cloud%20Alibaba-0.2.2..RELEASE-blue" alt="Downloads"/>
+</p>
+
+### 如果您觉得有帮助，请点右上角 "Star" 支持一下谢谢
 - 说明:
 本代码禁用于学习总结,希望大家可以容忍代码存在的bug，遇到问题可以微信联系：372787553
 - 本项目将用到微服务框架,如果你对微服务还比较陌生，可以去

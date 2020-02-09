@@ -167,5 +167,17 @@
             </resource>
         </resources>
     </build>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
+    <developers>
+        <developer>
+            <name>Yang Haiji</name>
+            <email>yanghaij327@163.com</email>
+        </developer>
+    </developers>
 </project>
